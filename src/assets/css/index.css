@@ -1,5 +1,8 @@
-/* 左侧导航栏 */
+input:focus {
+  outline: none;
+}
 
+/* 左侧导航栏 */
 .aisde .el-menu {
   /* 可视区域的100%，而100%是父容器的100% */
   height: 100vh;
@@ -44,6 +47,7 @@
 .el-main {
   overflow-y: auto;
   margin-top: 60px;
+  /* css计算函数，宽度-父容器宽度的100%-200像素 */
   width: calc(100%-200px);
 }
 /* img标签不用加. */
@@ -63,16 +67,50 @@
 .headerNav .el-link {
   margin: 0 20px;
 }
-/*  */
+
 .headerNav .el-tooltip__trigger:focus {
+  /* 移除元素获得焦点时的默认轮廓线 */
   outline: none;
 }
+/* 搜索列表 */
 .searchList {
+  /* 网格布局 */
   display: grid;
+  /* 创建5列的布局，每列的宽度自动调整 */
   grid-template-columns: repeat(5, auto);
 }
 .search-item {
-  border: 1px solid gray;
+  border: 1px solid #dadada;
   /* 右边边框重叠 */
   margin-right: -1px;
+}
+.search-item:focus {
+  border-bottom: blue;
+}
+/* 目的地/酒店名称 */
+.search-box {
+  padding: 8px 12px;
+}
+.search-box label {
+  color: #999;
+  display: block;
+}
+.search-box input {
+  border: 0;
+  font-weight: 700;
+  font-size: 16px;
+  padding-top: 10px;
+}
+/*伪类选择器 */
+/* 空格表示后代选择器，所有层级的后代元素*/
+/* 当元素获得焦点时，可以控制父元素的样式 */
+.search-item:focus-within {
+  border-bottom: 2px solid var(--el-color-primary);
+}
+/* 日期 */
+.search-box .el-date-editor.el-input__wrapper {
+  box-shadow: none;
+}
+.search-box .el-date-editor .el-input__wrapper:focus {
+  box-shadow: none;
 }
