@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import { Search } from "@element-plus/icons-vue";
+</script>
 
 <template>
   <div class="searchList">
@@ -33,7 +35,9 @@
         <input type="text" id="keyword" placeholder="火车、酒店名称或区域" />
       </div>
     </div>
-    <div class="search-item">5</div>
+    <div class="search-item">
+      <el-button type="primary" :icon="Search"></el-button>
+    </div>
   </div>
 </template>
 

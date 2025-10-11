@@ -1,7 +1,8 @@
 <script setup>
 import NavMenu from "./navMenu.vue";
 import Header_ from "./headerNav.vue";
-import searchList from "./searchList.vue";
+import SearchList from "./searchList.vue";
+import topFilter from "./topFilter.vue";
 </script>
 
 <template>
@@ -13,7 +14,8 @@ import searchList from "./searchList.vue";
         <Header_ />
         <el-main>
           <!-- 主要内容区域 -->
-          <searchList />
+          <SearchList />
+          <topFilter />
         </el-main>
       </el-container>
     </el-container>
