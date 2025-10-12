@@ -3,6 +3,7 @@ import NavMenu from "./navMenu.vue";
 import Header_ from "./headerNav.vue";
 import SearchList from "./searchList.vue";
 import topFilter from "./topFilter.vue";
+import recommend from "./recommend.vue";
 </script>
 
 <template>
@@ -14,8 +15,12 @@ import topFilter from "./topFilter.vue";
         <Header_ />
         <el-main>
           <!-- 主要内容区域 -->
+          <!-- 搜索栏 -->
           <SearchList />
+          <!-- 筛选 -->
           <topFilter />
+          <recommend />
+          <!-- 推荐区域 -->
         </el-main>
       </el-container>
     </el-container>

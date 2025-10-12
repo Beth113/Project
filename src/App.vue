@@ -18,5 +18,6 @@ body {
 #app {
   height: 100vh !important;
   min-width: 1280px; /* 设置最小宽度 */
+  overflow-y: auto;
 }
 </style>

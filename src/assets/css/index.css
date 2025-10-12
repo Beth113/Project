@@ -1,5 +1,12 @@
-input:focus {
+* {
+  margin: 0;
+  padding: 0;
+}
+*:focus {
   outline: none;
+}
+ul {
+  list-style: none;
 }
 
 /* 左侧导航栏 */
@@ -89,7 +96,7 @@ input:focus {
 }
 /* 目的地/酒店名称 */
 .search-box {
-  padding: 8px 12px;
+  padding: 4px 6px;
 }
 .search-box label {
   color: #999;
@@ -130,21 +137,134 @@ input:focus {
   grid-template-columns: 104px 1fr;
   grid-template-rows: repeat(3, auto);
 }
-/* >只选择直接子代选择器 */
+/* >直接子代选择器 */
 .topFilter > div {
   border-bottom: 1px solid #dadada;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 .topFilter h4 {
-  margin: 0;
-  line-height: 4rem;
+  line-height: 2rem;
   text-align: center;
 }
-
+/* 位置区域 */
+.topFilter .location-box {
+  padding-top: 10px;
+}
 .topFilter .el-button:hover {
   background-color: var(--el-color-primary);
   border: 1px solid var(--el-color-primary);
 }
 .topFilter .el-button {
-  margin: 10px 0;
+  margin: 1px 0;
+}
+/* 高级筛选 */
+.topFilter-filter .el-dropdown {
+  margin: 7px 6px;
+}
+/*推荐区域 */
+.recommend {
+  display: flex;
+  width: 1200px;
+  gap: 0 20px;
+  padding: 20px 0;
+}
+.recommend .recommend-left {
+  width: 680px;
+}
+.recommend .recommend-right {
+  width: 400px;
+}
+/* 轮播图 */
+.banner {
+  width: 400px;
+  height: 620px;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 覆盖整个容器，可能裁剪图片 */
+}
+/* 推荐列表 */
+/*li默认是display:list-item */
+.recommendList ul li {
+  display: flex;
+  background-color: #f4f6f9;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.list-left {
+  flex: 2;
+  display: flex;
+}
+.list-right {
+  border-left: 1px solid #dadada;
+  flex: 1;
+
+  text-align: right;
+}
+/* 推荐列表左边 */
+.list-left-img img {
+  flex: 1;
+  width: 120px;
+  height: auto;
+  object-fit: cover;
+}
+.list-left-title {
+  flex: 9;
+}
+/* 推荐列表左边文字部分 */
+/* 点赞手势 */
+.list-left-tagandtitle {
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.list-left-tagandtitle img {
+  height: 18px;
+  width: auto;
+  margin-left: 5px;
+}
+.list-left-transport {
+  margin-bottom: 5px;
+}
+.list-left-tag .el-tag {
+  margin: 0 5px;
+}
+/* 推荐列表右边 */
+.list-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.list-right-comment {
+  display: flex;
+  /* 水平靠右 */
+  justify-content: flex-end;
+}
+.list-right-comment {
+  margin-bottom: 15px;
+}
+.list-right-describe p {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--el-color-primary);
+}
+.list-right-score {
+  background-color: var(--el-color-primary);
+  padding: 6px;
+  font-size: 20px;
+  color: white;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+.list-right-describe a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #999;
+}
+.list-right-price p {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--el-color-primary);
 }

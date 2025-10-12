@@ -13,7 +13,7 @@ let myOrder = ref([
 <template>
   <div class="headerNav">
     <div class="header-logo">
-      <img src="/src/assets/images/logo.png" alt="" />
+      <img src="/public/images/logo.png" alt="" />
     </div>
     <div class="header-serach">
       <el-input
