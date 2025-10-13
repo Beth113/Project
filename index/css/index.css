@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  /* 叠加了半透明黑色渐变 */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(/index/images/背景图片.jpg);
+  background-position: center;
+  /* 背景图片覆盖整个容器 */
+  background-size: cover;
+  padding-left: 8%;
+  padding-right: 8%;
+  /* 盒模型计算包含padding */
+  box-sizing: border-box;
+}
+
+.navbar {
+  height: 12%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  /* 当鼠标悬停到这个元素上时，光标变成手型图标 */
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 30px;
+  cursor: pointer;
+  margin-left: 40px;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul li {
+  /* 移除ul前面的默认标记 (就是小圆点)*/
+  list-style: none;
+  /* 水平排列 */
+  display: inline-block;
+  margin-left: 60px;
+}
+
+nav ul li a {
+  /* 移除下划线 */
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+}
+
+.row {
+  display: flex;
+  height: 88%;
+  /* 垂直居中 */
+  align-items: center;
+}
+
+.col {
+  /* 每个列占50%宽度 */
+  flex-basis: 50%;
+}
+
+h1 {
+  color: #fff;
+  font-size: 70px;
+}
+
+p {
+  color: #fff;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+button {
+  width: 180px;
+  color: #000;
+  font-size: 12px;
+  padding: 12px 0;
+  background: #fff;
+  border: 0;
+  border-radius: 20px;
+  /* 移除焦点轮廓 */
+  outline: none;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+/* 卡片容器 */
+.card-container {
+  display: flex;
+  /* 允许换行 */
+  flex-wrap: wrap;
+  /* 卡片间距 */
+  gap: 15px;
+}
+
+.card {
+  /* 一共两个间距，共30px,需要三个卡片来承担，所以一个卡片得少占10px */
+  /* 33.33%是100%除以3 */
+  width: calc(33.33% - 10px);
+  height: 230px;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  /* 悬停动画 */
+  transition: transform 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 为每个卡片添加不同的背景图 */
+.card1 {
+  background-image: url("/index/images/t1.webp");
+}
+
+.card2 {
+  background-image: url("/index/images/t2.webp");
+}
+
+.card3 {
+  background-image: url("/index/images/t3.webp");
+}
+
+.card4 {
+  background-image: url("/index/images/t4.webp");
+}
+
+.card5 {
+  background-image: url("/index/images/t5.jpg");
+}
+
+.card6 {
+  background-image: url("/index/images/t6.webp");
+}
+
+/* 添加半透明遮罩增强文字可读性 */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+h5 {
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.card p {
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+  font-size: 12px;
+}
